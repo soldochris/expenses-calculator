@@ -13,7 +13,6 @@ const App = () => {
       <Balance />
       <TransactionForm />
       <TransactionList />
-      <h1>Hello world</h1>
     </GlobalProvider>
   )
 }

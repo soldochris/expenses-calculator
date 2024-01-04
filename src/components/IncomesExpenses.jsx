@@ -2,18 +2,17 @@ import { useGlobalState } from "../context/GlobalState";
 
 const IncomesExpenses = () => {
 
-const {transactions} = useGlobalState();
+  const {transactions} = useGlobalState();
 
-const amounts = transactions.map(transaction => transaction.amount);
+  const amounts = transactions.map(transaction => transaction.amount);
 
-const incomes = amounts
-  .filter(item => item > 0)
-  .reduce((acc, item) => (acc+=item),0);
+  const incomes = amounts
+    .filter(item => item > 0)
+    .reduce((acc, item) => (acc+=item),0);
 
-const expenses = amounts
-  .filter(item => item < 0)
-  .reduce((acc, item) => (acc+=item),0) * -1;
-
+  const expenses = amounts
+    .filter(item => item < 0)
+    .reduce((acc, item) => (acc+=item),0) * -1;
 
   return (
     <>
