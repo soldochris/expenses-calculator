@@ -8,11 +8,21 @@ import IncomesExpenses from "./components/IncomesExpenses";
 const App = () => {
   return (
     <GlobalProvider>
-      <Header />
-      <IncomesExpenses/>
-      <Balance />
-      <TransactionForm />
-      <TransactionList />
+      <div className="bg-zinc-900 text-white h-screen flex justify-center items-center">
+        <div className="container mx-auto w-2/6">
+          <div className="bg-zinc-800 p-10 rounded-lg flex gap-x-2">
+            <div className="">
+              <Header />
+              <IncomesExpenses/>
+              <Balance />
+              <TransactionForm />
+            </div>
+            <div className="w-full">
+              <TransactionList />
+            </div>
+          </div>
+        </div>
+      </div>
     </GlobalProvider>
   )
 }
